@@ -7,16 +7,14 @@
 
 Veritabanı olarak NoSQL [`DynamoDB`](https://aws.amazon.com/tr/dynamodb/?nc2=h_ql_prod_serv_ddb) kullanmaktadır.
 
-Başka bir tablo kullanılmak istenirse;
-### `Eser.js`
-dosyası örnek alınabilir.
+Başka bir tablo kullanılmak istenirse; `Eser.js` dosyası örnek alınabilir.
 
 İşlem yapılan tabloya yeni bir column eklenmek istenirse, kayıt formuna yeni alanın eklenmesi yeterlidir.
 
 Uygulama; [Versel](https://ktb-ui.vercel.app/) üzerinnden yayınlanmaktadır.
 
 Ekran Görüntüsü:
-![alt text](KTB_.png?raw=true)
+![alt text](https://github.com/tubademir23/KTB_UI/blob/main/KTB_.PNG?raw=true)
 _________________________________________________
 # Getting Started with Mebsis
 
