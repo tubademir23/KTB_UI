@@ -77,7 +77,7 @@ export default function Eser() {
         return (
             <div>
                 <Button label="İptal" icon="pi pi-times" onClick={handleModalCancel} className="p-button-text" />
-                <Button label="Kaydet" icon="pi pi-check" onClick={handleModalSave} disabled={!eser?.adi} />
+                <Button label={eser?.id ? 'Güncelle' : 'Kaydet'} icon="pi pi-check" onClick={handleModalSave} disabled={!eser?.adi} />
             </div>
         );
     }
@@ -90,7 +90,7 @@ export default function Eser() {
     const renderTableHeader = () => {
         return (
             <div className="table-header">
-                <Button label="Ekle" icon="pi pi-check" onClick={handleEkleClick} />
+                <Button label="Yeni Eser" icon="pi pi-check" onClick={handleEkleClick} />
             </div>
         );
     }
@@ -113,7 +113,7 @@ export default function Eser() {
               <Column field="id" header="ID"></Column>
               <Column field="adi" header="Adı"></Column>
               <Column field="yili" header="Yılı"></Column>
-              <Column body={actionBodyTemplate}></Column>
+              <Column header="İşlemler" body={actionBodyTemplate}></Column>
           </DataTable>
 
           <Dialog header={eser?.id ? 'Eser Güncelle' : 'Eser Kayıt'} visible={showModal} style={{ width: '50vw' }} footer={renderFooter('displayBasic')} onHide={() => setShowModal(false)}>
@@ -127,17 +127,17 @@ export default function Eser() {
               <br />
               <div className="p-field">
                   <span className="p-float-label">
-                    <InputText id="in" value={eser?.adi} onChange={(e) => handleModalChange('adi', e.target.value)} />
-                    <label htmlFor="in">Adı</label>
+                    <InputText id="adi" value={eser?.adi} onChange={(e) => handleModalChange('adi', e.target.value)} />
+                    <label htmlFor="adi">Adı</label>
                   </span>
               </div>
               <br />
               <div className="p-field">
                   <span className="p-float-label">
-                    <InputNumber id="in" value={eser?.yili} onChange={(e) => handleModalChange('yili', e.value)}
+                    <InputNumber id="yili" value={eser?.yili} onChange={(e) => handleModalChange('yili', e.value)}
                                  useGrouping={false} 
                     />
-                    <label htmlFor="in">Eser Yılı</label>
+                    <label htmlFor="yili">Eser Yılı</label>
                   </span>
               </div>
           </Dialog>
