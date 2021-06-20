@@ -8,7 +8,7 @@ import {Dialog} from "primereact/dialog";
 import {InputText} from "primereact/inputtext";
 import {InputNumber} from "primereact/inputnumber";
 
-export default function Crud() {
+export default function Eser() {
     const [eserler, setEserler] = useState(null);
     const [selectedEser, setSelectedEser] = useState(null);
     const [showModal, setShowModal] = useState(false);
@@ -135,7 +135,7 @@ export default function Crud() {
               <div className="p-field">
                   <span className="p-float-label">
                     <InputNumber id="in" value={eser?.yili} onChange={(e) => handleModalChange('yili', e.value)}
-                                 useGrouping={false}
+                                 useGrouping={false} 
                     />
                     <label htmlFor="in">Eser Yılı</label>
                   </span>
